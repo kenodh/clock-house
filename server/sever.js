@@ -27,11 +27,11 @@ http.createServer(function (req, res) {
         }
 
         res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('NOPPIX v3.5');
+        res.end('starting...');
     });
  
     
     
-}).listen(8080);
+}).listen(6750);
 
-console.log('server started at http://localhost:8080');
+console.log('server started at http://localhost:6750');
