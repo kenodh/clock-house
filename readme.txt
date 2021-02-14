@@ -1,4 +1,4 @@
-clock house v8.1 ©2011-2020 
+clock house v8.1 Â©2011-2020 
 
 Background of clock house:
 
@@ -17,3 +17,5 @@ Changelog:
 10/26/20 Version 7.1
 10/23/20 Version 8.0
 10/05/20 Version 8.1
+
+hope you feel good with clock house v10,have fun enetime you want!
