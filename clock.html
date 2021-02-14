@@ -1,7 +1,44 @@
 <html>
     <head>
 
-        
+        <style>
+       
+            .sidenav {
+              height: 100%;
+              width: 200px;
+              position: fixed;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              background-color: #111;
+              overflow-x: hidden;
+              padding-top: 20px;
+              font-family: "Lato", sans-serif;
+            }
+            
+            .sidenav a {
+              padding: 6px 8px 6px 16px;
+              text-decoration: none;
+              font-size: 25px;
+              color: #818181;
+              display: block;
+            }
+            
+            .sidenav a:hover {
+              color: #f1f1f1;
+            }
+            
+            .main {
+              margin-left: 160px; /* Same as the width of the sidenav */
+              font-size: 28px; /* Increased text to enable scrolling */
+              padding: 0px 10px;
+            }
+            
+            @media screen and (max-height: 450px) {
+              .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+            }
+            </style>
 
     </head>
     <body onload=display_ct();>
@@ -13,6 +50,21 @@
             <span id='ct'></span>
         </div>
         </div>
+        <div class="sidenav" onmouseenter="openNav(this)" onmouseleave="closeNav(this)" >
+            <a href="clock house.html"><i class="fa fa-home"></i> home</a>
+            <a href="add.html"><i class="fa fa-plus" aria-hidden="true"></i> add new link</a>
+            <a href="clock.html"><i class="fa fa-clock-o" aria-hidden="true"></i> clock</a>
+            <a href="clock house settings.html"><i class="fa fa-cog" aria-hidden="true"></i> settings</a>
+            <a href="securiti.html"><i class="fa fa-lock" aria-hidden="true"></i> clock house settings</a>
+            <a href="clock house im.html"><i class="fa fa-file-image-o" aria-hidden="true"></i>clock house image collection</a>
+            <a href="bank.html"><i class="fa fa-university" aria-hidden="true"></i> online banking</a>
+            <a href="shop.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> online shopping</a>
+            <a href="oppoinnent.html"><i class="fa fa-hospital-o" aria-hidden="true"></i> appointments</a>
+            <a href="connection.html"><i class="fa fa-plug" aria-hidden="true"></i> connections</a>
+            <a href="books.html"><i class="fa fa-book" aria-hidden="true"></i> books</a>
+            <a href="tv.html"><i class="fa fa-television" aria-hidden="true"></i> tv</a>
+            <a href="fm.html"><i class="icofont-radio"></i> fm</a>
+          </div>
         <footer style="height: 200px; background-color: blue;display:flex;flex-direction: row;position: fixed;bottom: 0;width: 100%;">
           
             <div style="display:flex;flex-direction: column;">
