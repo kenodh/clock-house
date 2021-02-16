@@ -1,4 +1,4 @@
-﻿clock house v11 ©2011-2020 
+﻿clock house v12 ©2011-2020 
 
 
 
@@ -41,4 +41,4 @@ Changelog:
 
 
 
-hope you feel good with clock house v10,have fun anytime you want!
+hope you feel good with clock house v12,have fun anytime you want!
