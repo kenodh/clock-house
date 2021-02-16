@@ -1,0 +1,7 @@
+#nav > a{
+    display: flex; flex-direction: row;
+ }
+
+ #nav > a >i{
+   margin-right: 10px;
+ } 
