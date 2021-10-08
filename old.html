@@ -70,7 +70,7 @@ span.psw {
 
 <h2>clock house v14 login</h2>
 
-<form action="clockhouse.html" method="post">
+<div>
   <div class="imgcontainer">
     <img src="img/avatar2.png" alt="Avatar" class="avatar">
   </div>
@@ -82,7 +82,7 @@ span.psw {
     <label for="psw"><b>Password:</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
         
-    <button type="submit">Login</button>
+    <button type="submit" onclick="login()">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
@@ -92,7 +92,12 @@ span.psw {
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
-</form>
+</div>
 
+<script>
+  function login(){
+    document.location="clock house.html";
+  }
+</script>
 </body>
 </html>
