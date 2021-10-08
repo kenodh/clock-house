@@ -1,44 +1,46 @@
 <html>
     <head>
-
-        <style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
        
-            .sidenav {
-              height: 100%;
-              width: 200px;
-              position: fixed;
-              z-index: 1;
-              top: 0;
-              left: 0;
-              background-color: #111;
-              overflow-x: hidden;
-              padding-top: 20px;
-              font-family: "Lato", sans-serif;
-            }
-            
-            .sidenav a {
-              padding: 6px 8px 6px 16px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-            }
-            
-            .sidenav a:hover {
-              color: #f1f1f1;
-            }
-            
-            .main {
-              margin-left: 160px; /* Same as the width of the sidenav */
-              font-size: 28px; /* Increased text to enable scrolling */
-              padding: 0px 10px;
-            }
-            
-            @media screen and (max-height: 450px) {
-              .sidenav {padding-top: 15px;}
-              .sidenav a {font-size: 18px;}
-            }
-            </style>
+        .sidenav {
+          height: 100%;
+          width: 300px;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          padding-top: 20px;
+          font-family: "Lato", sans-serif;
+        }
+        
+        .sidenav a {
+          padding: 6px 8px 6px 16px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+        }
+        
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+        
+        .main {
+          margin-left: 160px; /* Same as the width of the sidenav */
+          font-size: 28px; /* Increased text to enable scrolling */
+          padding: 0px 10px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        
+        </style>
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/icofont/icofont.min.css">
@@ -52,14 +54,15 @@
             <span id='ct'></span>
         </div>
         </div>
-        <div class="sidenav" onmouseenter="openNav(this)" onmouseleave="closeNav(this)" >
+        <div id="nav" class="sidenav" onmouseenter="openNav(this)" onmouseleave="closeNav(this)" >
+          
           <a href="clock house.html"><i class="fa fa-home" aria-hidden="true"></i> home</a>
           <a href="home 2.html"><i class="fa fa-home" aria-hidden="true"></i> home2</a>
           <a href="about.html"><i class="fa fa-address-book" aria-hidden="true"></i> about</a>
           <a href="add.html"><i class="fa fa-plus" aria-hidden="true"></i> add new link</a>
           <a href="massages.html"><i class="fa fa-comments" aria-hidden="true"></i> massages</a>
           <a href="calculator.html"><i class="fa fa-calculator"></i> calculator</a>
-         
+     
           <a href="call.html"><i class="fa fa-phone"></i> call</a>
           <a href="toy tea cooker.html"><i class="fa fa-coffee" aria-hidden="true"></i> tea cooker</a>
           <a href="securiti.html"><i class="fa fa-wrench" aria-hidden="true"></i> clock house settings</a>
@@ -73,7 +76,7 @@
           <a href="fm.html"><i class="icofont-radio"></i> fm</a>
           <a href="login.html"><i class="fa fa-sign-out"></i> logout</a>
           <div style="margin-bottom: 5px;"></div>
-        </div>          
+        </div>           
         <footer style="height: 200px; background-color: blue;display:flex;flex-direction: row;position: fixed;bottom: 0;width: 100%;">
           
             <div style="display:flex;flex-direction: column;">
@@ -179,7 +182,14 @@
                 ctx.rotate(-pos);
             }
         </script>
-         
+         <script>
+          function openNav(nav){
+            nav.style.width="200px";
+          }
+          function closeNav(nav){
+            nav.style.width="1px";
+          }
+      </script>
           </div>         
     </body>
 </html>
