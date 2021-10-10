@@ -10,6 +10,62 @@ p {
 }
 </style>
 <style>
+  button{
+    background: #0aff2f;
+    background-image: -webkit-linear-gradient(top, #0aff2f, #1df705);
+    background-image: -moz-linear-gradient(top, #0aff2f, #1df705);
+    background-image: -ms-linear-gradient(top, #0aff2f, #1df705);
+    background-image: -o-linear-gradient(top, #0aff2f, #1df705);
+    background-image: linear-gradient(to bottom, #0aff2f, #1df705);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #cf04b1;
+    font-size: 23px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  button:hover {
+    background: #00f767;
+    background-image: -webkit-linear-gradient(top, #00f767, #096902);
+    background-image: -moz-linear-gradient(top, #00f767, #096902);
+    background-image: -ms-linear-gradient(top, #00f767, #096902);
+    background-image: -o-linear-gradient(top, #00f767, #096902);
+    background-image: linear-gradient(to bottom, #00f767, #096902);
+    text-decoration: none;
+  }
+
+  span {
+    font-family: Arial;
+    color: #cf04b1;
+    font-size: 23px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  div {
+    margin-top: 2cm
+    
+  }
+
+  body{
+    background-color: #000000; 
+  }
+
+  h1{
+    font-family: Arial;
+    color: #cf04b1;
+    font-size: 23px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  
+
+</style>
+<style>
        
   .sidenav {
     height: 100%;
@@ -86,46 +142,41 @@ p {
   </select>
 
   <h2>This is the toy tea cooker timer.</h2>
+
+  <div style="text-align:center" >  
   
-<p id="demo"></p>
+  <button id="go">Go</button>
+      
+  <span id="displayDiv"></span>
+    
+  <button id="stop">stop</button>
+    
+  </div>
 
 <script>
-// Set the date we're counting down to
-var countDownDate = new Date("december 16, 2022 12:37:25").getTime();
+  //inspired from
+  //https://stackoverflow.com/questions/11075927/how-can-i-use-setinterval-or-settimeout-and-display-the-results-during-the-count
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+  var timer;
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+  function countDown(i, callback) {
+      //callback = callback || function(){};
+      timer = setInterval(function() {
+          document.getElementById("displayDiv").innerHTML = "Number: " + i;
+          i-- || (clearInterval(timer), callback());
+      }, 1000);
   }
-}, 1000);
-</script>
-<script>
-  function openNav(nav){
-    nav.style.width="200px";
-  }
-  function closeNav(nav){
-    nav.style.width="1px";
-  }
+
+
+  $("#go").on("click", function(){
+      countDown(5, function(){
+          alert("Countdown done!")
+      });
+  });
+
+  $("#stop").click(function(){
+      clearInterval(timer);
+  });
 </script>
 </body>
 </html>
