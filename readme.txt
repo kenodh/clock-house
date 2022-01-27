@@ -39,6 +39,5 @@ Changelog:
 14/05/24 Version 12
 
 
-
-
-hope you feel good with clock house v12,have fun anytime you want!
+ 
+Sorry, but ICS ended support for this repository.
